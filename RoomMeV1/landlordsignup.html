@@ -1,0 +1,78 @@
+
+<html>
+	<head>
+   <!-- 
+    Landlord Sign up Page
+   	Cmpe 180-38
+   	Team 6
+    -->
+
+	<meta charset="UTF-8" />
+	<title>RoomMe - Landlord Sign Up Page</title>
+	<link href="styles.css" rel="stylesheet" type="text/css" />
+   </head>
+
+
+   <body>
+	<header>
+	    <h1>RoomMe Application</h1>
+	</header>
+
+	<nav>
+		<ul>
+			<li><a href="homepage.html">RoomMe Home</a></li>
+			<li><a href="userhome.php">User Home</a></li>
+		</ul>
+	</nav>
+
+	</br>	
+	</br>
+
+	<h2 id="pagetype">Landlord Sign Up Page</h2>
+
+	<!--<center>
+		<h2>LANDLORD Sign Up</h2>
+	</center>-->
+
+	<form action="landlordsignup.php" method="post">
+		<div align="center">
+		<fieldset id="LandlordInfo">
+			<label for="username">Username</label>
+			<input name="username" type="text" required="required" />
+			<br/></br/>
+
+			<label for="password">Password</label>
+			<input name="password" type="password" required="required" />
+			<br/></br/>
+
+			<label for="email">Email</label>
+			<input name="email" type="text" placeholder="test@something.xyz" required="required" />
+			<br/></br/>
+
+			<label for="fname">First Name</label>
+			<input name="fname" type="text" required="required" />
+			<br/></br/>
+
+			<label for="lname">Last Name</label>
+			<input name="lname" type="text" required="required" />
+			<br/></br/>
+
+			<label for="phone_number">Phone Number</label>
+			<input name="phone_number" id='phone_number' type="text" placeholder="##########" required="required" />
+			<br/></br/>
+
+		</fieldset>
+
+			
+		<input type="submit" value="Sign up">
+		</div>
+	</form>
+
+
+	</body>
+
+	<footer>
+		&copy; Team 6, Cmpe 180-38, SJSU, 2014
+	</footer>
+
+</html>

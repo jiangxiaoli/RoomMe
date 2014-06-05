@@ -1,0 +1,340 @@
+ Id Command    Argument
+140429 10:33:16	    1 Connect	pma@localhost on 
+		    2 Connect	root@localhost on 
+		    2 Query	SELECT @@version, @@version_comment
+		    2 Query	SHOW VARIABLES LIKE 'character_set_results'
+		    2 Query	SET CHARACTER SET 'utf8mb4'
+		    2 Query	SET collation_connection = 'utf8mb4_general_ci'
+		    2 Query	SELECT * FROM information_schema.CHARACTER_SETS
+		    2 Query	SELECT * FROM information_schema.COLLATIONS
+		    1 Init DB	phpmyadmin
+		    1 Query	SHOW TABLES FROM `phpmyadmin`
+		    1 Query	SELECT `config_data`, UNIX_TIMESTAMP(`timevalue`) ts FROM `phpmyadmin`.`pma_userconfig` WHERE `username` = 'root'
+		    2 Query	SELECT COUNT(*) FROM mysql.user
+		    2 Init DB	mysql
+		    2 Query	SELECT USER()
+		    2 Query	SHOW GRANTS
+		    1 Query	SELECT `tables` FROM `phpmyadmin`.`pma_recent` WHERE `username` = 'root'
+		    2 Query	SELECT `SCHEMA_NAME` FROM `INFORMATION_SCHEMA`.`SCHEMATA` WHERE TRUE ORDER BY `SCHEMA_NAME` ASC LIMIT 0, 250
+		    2 Query	SELECT COUNT(*) FROM `INFORMATION_SCHEMA`.`SCHEMATA` WHERE TRUE
+		    2 Query	SELECT COUNT(*) FROM `INFORMATION_SCHEMA`.`SCHEMATA` WHERE TRUE
+		    2 Query	SHOW MASTER LOGS
+		    2 Query	SHOW MASTER LOGS
+		    2 Quit	
+		    1 Quit	
+140429 10:37:32	    3 Connect	root@localhost on roomme
+		    3 Query	SELECT * FROM housing
+		    3 Quit	
+140429 10:51:13	    4 Connect	root@localhost on roomme
+		    4 Query	SELECT * FROM housing WHERE Parking = 'n' AND Laundry = 'n'
+		    4 Quit	
+140429 10:55:55	    5 Connect	root@localhost on roomme
+		    5 Query	SELECT * FROM housing WHERE Parking = 'n' AND Laundry = 'n'
+		    5 Quit	
+140429 11:05:27	    6 Connect	root@localhost on roomme
+		    6 Query	SELECT * FROM housing WHERE Parking = 'n' AND Laundry = 'n'
+		    6 Quit	
+140429 11:05:32	    7 Connect	root@localhost on roomme
+		    7 Query	SELECT * FROM housing
+		    7 Quit	
+140429 11:05:35	    8 Connect	root@localhost on roomme
+		    8 Query	SELECT * FROM housing
+		    8 Quit	
+140429 11:05:38	    9 Connect	root@localhost on roomme
+		    9 Query	SELECT * FROM housing
+		    9 Quit	
+140429 11:07:14	   10 Connect	root@localhost on roomme
+		   10 Query	SELECT * FROM housing
+		   10 Quit	
+140429 11:07:23	   11 Connect	root@localhost on roomme
+		   11 Query	SELECT * FROM housing
+		   11 Quit	
+140429 11:07:41	   12 Connect	root@localhost on roomme
+		   12 Query	SELECT * FROM housing
+		   12 Quit	
+c:\xampp_apachefriends\mysql\bin\mysqld.exe, Version: 5.6.16-log (MySQL Community Server (GPL)). started with:
+TCP Port: 3306, Named Pipe: C:/XAMPP_apachefriends/mysql/mysql.sock
+Time                 Id Command    Argument
+140429 11:08:39	    1 Connect	pma@localhost on 
+		    2 Connect	root@localhost on 
+		    2 Query	SET CHARACTER SET 'utf8mb4'
+		    2 Query	SET collation_connection = 'utf8mb4_general_ci'
+		    2 Query	SELECT COUNT(*) FROM mysql.user
+		    2 Init DB	mysql
+		    2 Query	SELECT USER()
+		    2 Query	SHOW GRANTS
+		    2 Query	SELECT `SCHEMA_NAME` FROM `INFORMATION_SCHEMA`.`SCHEMATA` WHERE TRUE ORDER BY `SCHEMA_NAME` ASC LIMIT 0, 250
+		    2 Query	SELECT COUNT(*) FROM `INFORMATION_SCHEMA`.`SCHEMATA` WHERE TRUE
+		    2 Query	SELECT COUNT(*) FROM `INFORMATION_SCHEMA`.`SCHEMATA` WHERE TRUE
+		    2 Query	SHOW MASTER LOGS
+		    2 Query	SHOW MASTER LOGS
+		    2 Quit	
+		    1 Quit	
+140429 11:08:46	    3 Connect	root@localhost on roomme
+		    3 Query	SELECT * FROM housing
+		    3 Quit	
+140429 11:09:52	    4 Connect	root@localhost on roomme
+		    4 Query	SELECT * FROM housing
+		    4 Quit	
+140429 11:17:52	    5 Connect	root@localhost on roomme
+		    5 Query	SELECT * FROM housing
+		    5 Quit	
+140429 11:18:14	    6 Connect	root@localhost on roomme
+		    6 Query	SELECT * FROM housing
+		    6 Quit	
+140429 11:21:22	    7 Connect	root@localhost on roomme
+		    7 Query	SELECT * FROM housing
+		    7 Quit	
+140429 11:21:23	    8 Connect	root@localhost on roomme
+		    8 Query	SELECT * FROM housing
+		    8 Quit	
+		    9 Connect	root@localhost on roomme
+		    9 Query	SELECT * FROM housing
+		    9 Quit	
+		   10 Connect	root@localhost on roomme
+		   10 Query	SELECT * FROM housing
+		   10 Quit	
+		   11 Connect	root@localhost on roomme
+		   11 Query	SELECT * FROM housing
+		   11 Quit	
+140429 11:21:28	   12 Connect	root@localhost on roomme
+		   12 Query	SELECT * FROM housing
+		   12 Quit	
+140429 11:27:18	   13 Connect	root@localhost on roomme
+		   13 Query	SELECT * FROM housing
+		   13 Quit	
+140429 11:27:54	   14 Connect	root@localhost on roomme
+		   14 Query	SELECT * FROM housing
+		   14 Quit	
+140429 11:29:03	   15 Connect	root@localhost on roomme
+		   15 Query	SELECT * FROM housing
+		   15 Quit	
+140429 11:32:47	   16 Connect	root@localhost on roomme
+		   16 Query	SELECT * FROM housing
+		   16 Quit	
+140429 11:33:11	   17 Connect	root@localhost on roomme
+		   17 Query	SELECT A.Rooms_ID, A.Price, A.Room_Type, A.Bathroom_Type, A.Start_date, A.Capacity, A.Parking, A.Laundry,			A.Smoking, A.Pets, B.Street_Address, B.City, B.State, B.Zip_code, B.Distance_to_school 
+			FROM rooms A,	housing B WHERE A.In_Housing = B.Housing_ID
+		   17 Quit	
+140429 11:34:03	   18 Connect	root@localhost on roomme
+		   18 Query	SELECT A.Rooms_ID, A.Price, A.Room_Type, A.Bathroom_Type, A.Start_date, A.Capacity, A.Parking, A.Laundry,			A.Smoking, A.Pets, B.Street_Address, B.City, B.State, B.Zip_code, B.Distance_to_school 
+			FROM rooms A,	housing B WHERE A.In_Housing = B.Housing_ID
+		   18 Quit	
+140429 12:59:10	   19 Connect	root@localhost on roomme
+		   19 Query	SELECT A.Rooms_ID, A.Price, A.Room_Type, A.Bathroom_Type, A.Start_date, A.Capacity, A.Parking, A.Laundry,			A.Smoking, A.Pets, B.Street_Address, B.City, B.State, B.Zip_code, B.Distance_to_school 
+			FROM rooms A,	housing B WHERE A.In_Housing = B.Housing_ID
+		   19 Quit	
+140429 12:59:44	   20 Connect	root@localhost on roomme
+		   20 Query	SELECT * FROM tenant
+		   20 Quit	
+140429 13:06:37	   21 Connect	root@localhost on roomme
+		   21 Query	SELECT * FROM housing
+		   21 Quit	
+140429 13:08:09	   22 Connect	root@localhost on roomme
+		   22 Query	SELECT * FROM housing
+		   22 Quit	
+140429 13:20:04	   23 Connect	root@localhost on roomme
+		   23 Query	SELECT * FROM housing
+		   23 Quit	
+140429 13:47:12	   24 Connect	root@localhost on roomme
+		   24 Query	SELECT * FROM housing
+		   24 Quit	
+140429 13:50:13	   25 Connect	root@localhost on roomme
+		   25 Query	SELECT * FROM housing
+		   25 Quit	
+140429 13:53:30	   26 Connect	root@localhost on roomme
+		   26 Query	SELECT * FROM housing
+		   26 Quit	
+140429 13:54:35	   27 Connect	root@localhost on roomme
+		   27 Query	SELECT * FROM housing
+		   27 Quit	
+140429 13:55:35	   28 Connect	root@localhost on roomme
+		   28 Query	SELECT * FROM housing
+		   28 Quit	
+140429 13:59:34	   29 Connect	root@localhost on roomme
+		   29 Query	SELECT * FROM housing
+		   29 Quit	
+140429 14:05:02	   30 Connect	root@localhost on roomme
+		   30 Query	SELECT * FROM housing
+		   30 Quit	
+140429 14:05:28	   31 Connect	root@localhost on roomme
+		   31 Query	SELECT * FROM housing WHERE No_of_Bedrooms BETWEEN 1 AND 4 AND Distance_to_school <= 4
+		   31 Quit	
+140429 14:07:33	   32 Connect	root@localhost on roomme
+		   32 Query	SELECT * FROM housing
+		   32 Quit	
+140429 14:08:07	   33 Connect	root@localhost on roomme
+		   33 Query	SELECT * FROM housing WHERE Price BETWEEN 1100 AND 2200  AND Max_capacity <= 4
+		   33 Quit	
+140429 14:08:33	   34 Connect	root@localhost on roomme
+		   34 Query	SELECT * FROM housing WHERE Price BETWEEN 1100 AND 2200  AND Max_capacity <= 4 AND Parking = 'y' AND Laundry = 'y'
+		   34 Quit	
+140429 14:11:21	   35 Connect	root@localhost on roomme
+		   35 Query	SELECT * FROM housing
+		   35 Quit	
+140429 14:35:53	   36 Connect	root@localhost on roomme
+		   36 Query	SELECT A.Rooms_ID, A.Price, A.Room_Type, A.Bathroom_Type, A.Start_date, A.Capacity, A.Parking, A.Laundry,			A.Smoking, A.Pets, B.Street_Address, B.City, B.State, B.Zip_code, B.Distance_to_school 
+			FROM rooms A,	housing B WHERE A.In_Housing = B.Housing_ID
+		   36 Quit	
+140429 14:43:20	   37 Connect	root@localhost on roomme
+		   37 Query	SELECT A.Rooms_ID, A.Price, A.Room_Type, A.Bathroom_Type, A.Start_date, A.Capacity, A.Parking, A.Laundry,			A.Smoking, A.Pets, B.Street_Address, B.City, B.State, B.Zip_code, B.Distance_to_school 
+			FROM rooms A,	housing B WHERE A.In_Housing = B.Housing_ID
+		   37 Quit	
+140429 14:43:56	   38 Connect	root@localhost on roomme
+		   38 Query	SELECT A.Rooms_ID, A.Price, A.Room_Type, A.Bathroom_Type, A.Start_date, A.Capacity, A.Parking, A.Laundry,			A.Smoking, A.Pets, B.Street_Address, B.City, B.State, B.Zip_code, B.Distance_to_school 
+			FROM rooms A,	housing B WHERE A.In_Housing = B.Housing_ID AND A.Price BETWEEN 600 AND 1000
+		   38 Quit	
+140429 14:44:52	   39 Connect	root@localhost on roomme
+		   39 Query	SELECT A.Rooms_ID, A.Price, A.Room_Type, A.Bathroom_Type, A.Start_date, A.Capacity, A.Parking, A.Laundry,			A.Smoking, A.Pets, B.Street_Address, B.City, B.State, B.Zip_code, B.Distance_to_school 
+			FROM rooms A,	housing B WHERE A.In_Housing = B.Housing_ID AND A.Room_Type = 'Single Bedroom' AND A.Price BETWEEN 600 AND 1000 AND A.Capacity <= 3 AND A.Start_date <= '2014-07-19'
+		   39 Quit	
+140429 14:45:11	   40 Connect	root@localhost on roomme
+		   40 Query	SELECT A.Rooms_ID, A.Price, A.Room_Type, A.Bathroom_Type, A.Start_date, A.Capacity, A.Parking, A.Laundry,			A.Smoking, A.Pets, B.Street_Address, B.City, B.State, B.Zip_code, B.Distance_to_school 
+			FROM rooms A,	housing B WHERE A.In_Housing = B.Housing_ID
+		   40 Quit	
+140429 14:46:19	   41 Connect	root@localhost on roomme
+		   41 Query	SELECT A.Rooms_ID, A.Price, A.Room_Type, A.Bathroom_Type, A.Start_date, A.Capacity, A.Parking, A.Laundry,			A.Smoking, A.Pets, B.Street_Address, B.City, B.State, B.Zip_code, B.Distance_to_school 
+			FROM rooms A,	housing B WHERE A.In_Housing = B.Housing_ID
+		   41 Quit	
+140429 14:52:20	   42 Connect	root@localhost on roomme
+		   42 Query	SELECT * FROM tenant
+		   42 Quit	
+140429 14:53:37	   43 Connect	root@localhost on roomme
+		   43 Query	SELECT * FROM tenant WHERE School='SJSU' AND Major = 'Chemistry' AND Age BETWEEN 18 AND 27
+		   43 Quit	
+140429 14:53:59	   44 Connect	root@localhost on roomme
+		   44 Query	SELECT * FROM tenant WHERE School='SJSU' AND Major = 'Chemistry' AND Age BETWEEN 18 AND 27  AND Home_country = 'China'
+		   44 Quit	
+140429 14:54:07	   45 Connect	root@localhost on roomme
+		   45 Query	SELECT * FROM tenant WHERE Home_country = 'China'
+		   45 Quit	
+140429 14:57:12	   46 Connect	root@localhost on roomme
+		   46 Query	SELECT * FROM tenant WHERE Home_country = 'China'
+		   46 Quit	
+140429 14:57:21	   47 Connect	root@localhost on roomme
+		   47 Query	SELECT A.Rooms_ID, A.Price, A.Room_Type, A.Bathroom_Type, A.Start_date, A.Capacity, A.Parking, A.Laundry,			A.Smoking, A.Pets, B.Street_Address, B.City, B.State, B.Zip_code, B.Distance_to_school 
+			FROM rooms A,	housing B WHERE A.In_Housing = B.Housing_ID
+		   47 Quit	
+140429 14:57:28	   48 Connect	root@localhost on roomme
+		   48 Query	SELECT A.Rooms_ID, A.Price, A.Room_Type, A.Bathroom_Type, A.Start_date, A.Capacity, A.Parking, A.Laundry,			A.Smoking, A.Pets, B.Street_Address, B.City, B.State, B.Zip_code, B.Distance_to_school 
+			FROM rooms A,	housing B WHERE A.In_Housing = B.Housing_ID AND A.Room_Type = 'Shared Bedroom' AND A.Bathroom_Type = 'Individual'
+		   48 Quit	
+140429 14:57:50	   49 Connect	root@localhost on roomme
+		   49 Query	SELECT A.Rooms_ID, A.Price, A.Room_Type, A.Bathroom_Type, A.Start_date, A.Capacity, A.Parking, A.Laundry,			A.Smoking, A.Pets, B.Street_Address, B.City, B.State, B.Zip_code, B.Distance_to_school 
+			FROM rooms A,	housing B WHERE A.In_Housing = B.Housing_ID AND A.Room_Type = 'Shared Bedroom' AND A.Bathroom_Type = 'Individual' AND A.Capacity <= 3
+		   49 Quit	
+140429 14:59:49	   50 Connect	root@localhost on roomme
+		   50 Query	SELECT A.Rooms_ID, A.Price, A.Room_Type, A.Bathroom_Type, A.Start_date, A.Capacity, A.Parking, A.Laundry,			A.Smoking, A.Pets, B.Street_Address, B.City, B.State, B.Zip_code, B.Distance_to_school 
+			FROM rooms A,	housing B WHERE A.In_Housing = B.Housing_ID
+		   50 Quit	
+140429 15:00:04	   51 Connect	root@localhost on roomme
+		   51 Query	SELECT * FROM tenant
+		   51 Quit	
+140429 15:00:23	   52 Connect	root@localhost on roomme
+		   52 Query	SELECT * FROM housing
+		   52 Quit	
+140429 15:02:11	   53 Connect	root@localhost on roomme
+		   53 Query	SELECT * FROM housing WHERE Price BETWEEN 1000 AND 2200
+		   53 Quit	
+140429 16:46:57	   54 Connect	pma@localhost on 
+		   55 Connect	root@localhost on 
+		   55 Query	SET CHARACTER SET 'utf8mb4'
+		   55 Query	SET collation_connection = 'utf8mb4_general_ci'
+		   55 Query	SELECT COUNT(*) FROM mysql.user
+		   55 Init DB	mysql
+		   55 Query	SELECT USER()
+		   55 Query	SHOW GRANTS
+		   55 Query	SELECT `SCHEMA_NAME` FROM `INFORMATION_SCHEMA`.`SCHEMATA` WHERE TRUE ORDER BY `SCHEMA_NAME` ASC LIMIT 0, 250
+		   55 Query	SELECT COUNT(*) FROM `INFORMATION_SCHEMA`.`SCHEMATA` WHERE TRUE
+		   55 Query	SELECT COUNT(*) FROM `INFORMATION_SCHEMA`.`SCHEMATA` WHERE TRUE
+		   55 Query	SHOW MASTER LOGS
+		   55 Query	SHOW MASTER LOGS
+		   55 Quit	
+		   54 Quit	
+140429 16:47:01	   56 Connect	pma@localhost on 
+		   57 Connect	root@localhost on 
+		   57 Query	SET CHARACTER SET 'utf8mb4'
+		   57 Query	SET collation_connection = 'utf8mb4_general_ci'
+		   57 Init DB	roomme
+		   57 Query	SHOW TABLES FROM `roomme`
+		   57 Query	SELECT *,
+                    `TABLE_SCHEMA`       AS `Db`,
+                    `TABLE_NAME`         AS `Name`,
+                    `TABLE_TYPE`         AS `TABLE_TYPE`,
+                    `ENGINE`             AS `Engine`,
+                    `ENGINE`             AS `Type`,
+                    `VERSION`            AS `Version`,
+                    `ROW_FORMAT`         AS `Row_format`,
+                    `TABLE_ROWS`         AS `Rows`,
+                    `AVG_ROW_LENGTH`     AS `Avg_row_length`,
+                    `DATA_LENGTH`        AS `Data_length`,
+                    `MAX_DATA_LENGTH`    AS `Max_data_length`,
+                    `INDEX_LENGTH`       AS `Index_length`,
+                    `DATA_FREE`          AS `Data_free`,
+                    `AUTO_INCREMENT`     AS `Auto_increment`,
+                    `CREATE_TIME`        AS `Create_time`,
+                    `UPDATE_TIME`        AS `Update_time`,
+                    `CHECK_TIME`         AS `Check_time`,
+                    `TABLE_COLLATION`    AS `Collation`,
+                    `CHECKSUM`           AS `Checksum`,
+                    `CREATE_OPTIONS`     AS `Create_options`,
+                    `TABLE_COMMENT`      AS `Comment`
+                FROM `information_schema`.`TABLES` t
+                WHERE  `TABLE_SCHEMA`
+                    IN ('roomme')
+                     ORDER BY Name ASC LIMIT 250 OFFSET 0
+		   57 Query	SHOW MASTER STATUS
+		   57 Query	SHOW SLAVE STATUS
+		   57 Query	SELECT DEFAULT_COLLATION_NAME FROM information_schema.SCHEMATA WHERE SCHEMA_NAME = 'roomme' LIMIT 1
+		   56 Query	SELECT tracking_active FROM `phpmyadmin`.`pma_tracking` WHERE db_name = 'roomme'  AND table_name = 'housing'  ORDER BY version DESC
+		   56 Query	SELECT MAX(version) FROM `phpmyadmin`.`pma_tracking` WHERE `db_name` = 'roomme'  AND `table_name` = 'housing'
+		   56 Query	SELECT tracking_active FROM `phpmyadmin`.`pma_tracking` WHERE db_name = 'roomme'  AND table_name = 'landlord'  ORDER BY version DESC
+		   56 Query	SELECT MAX(version) FROM `phpmyadmin`.`pma_tracking` WHERE `db_name` = 'roomme'  AND `table_name` = 'landlord'
+		   56 Query	SELECT tracking_active FROM `phpmyadmin`.`pma_tracking` WHERE db_name = 'roomme'  AND table_name = 'primary_tenant'  ORDER BY version DESC
+		   56 Query	SELECT MAX(version) FROM `phpmyadmin`.`pma_tracking` WHERE `db_name` = 'roomme'  AND `table_name` = 'primary_tenant'
+		   56 Query	SELECT tracking_active FROM `phpmyadmin`.`pma_tracking` WHERE db_name = 'roomme'  AND table_name = 'rating'  ORDER BY version DESC
+		   56 Query	SELECT MAX(version) FROM `phpmyadmin`.`pma_tracking` WHERE `db_name` = 'roomme'  AND `table_name` = 'rating'
+		   56 Query	SELECT tracking_active FROM `phpmyadmin`.`pma_tracking` WHERE db_name = 'roomme'  AND table_name = 'rooms'  ORDER BY version DESC
+		   56 Query	SELECT MAX(version) FROM `phpmyadmin`.`pma_tracking` WHERE `db_name` = 'roomme'  AND `table_name` = 'rooms'
+		   56 Query	SELECT tracking_active FROM `phpmyadmin`.`pma_tracking` WHERE db_name = 'roomme'  AND table_name = 'secondary_tenant'  ORDER BY version DESC
+		   56 Query	SELECT MAX(version) FROM `phpmyadmin`.`pma_tracking` WHERE `db_name` = 'roomme'  AND `table_name` = 'secondary_tenant'
+		   56 Query	SELECT tracking_active FROM `phpmyadmin`.`pma_tracking` WHERE db_name = 'roomme'  AND table_name = 'tenant'  ORDER BY version DESC
+		   56 Query	SELECT MAX(version) FROM `phpmyadmin`.`pma_tracking` WHERE `db_name` = 'roomme'  AND `table_name` = 'tenant'
+		   57 Query	SHOW VARIABLES LIKE 'storage_engine'
+		   57 Query	SHOW TABLES FROM `roomme`
+		   57 Query	SELECT CURRENT_USER()
+		   57 Query	SELECT `PRIVILEGE_TYPE` FROM `INFORMATION_SCHEMA`.`USER_PRIVILEGES` WHERE GRANTEE='''root''@''localhost''' AND PRIVILEGE_TYPE='EVENT'
+		   57 Query	SELECT CURRENT_USER()
+		   57 Query	SELECT `PRIVILEGE_TYPE` FROM `INFORMATION_SCHEMA`.`USER_PRIVILEGES` WHERE GRANTEE='''root''@''localhost''' AND PRIVILEGE_TYPE='TRIGGER'
+		   56 Query	SELECT `comment`
+               FROM `phpmyadmin`.`pma_column_info`
+              WHERE db_name     = 'roomme'
+                AND table_name  = ''
+                AND column_name = '(db_comment)'
+		   56 Query	SELECT `comment`
+               FROM `phpmyadmin`.`pma_column_info`
+              WHERE db_name     = 'roomme'
+                AND table_name  = ''
+                AND column_name = '(db_comment)'
+		   57 Query	SHOW TABLES FROM `roomme`
+		   57 Query	SELECT CURRENT_USER()
+		   57 Query	SELECT `PRIVILEGE_TYPE` FROM `INFORMATION_SCHEMA`.`USER_PRIVILEGES` WHERE GRANTEE='''root''@''localhost''' AND PRIVILEGE_TYPE='EVENT'
+		   57 Query	SELECT CURRENT_USER()
+		   57 Query	SELECT `PRIVILEGE_TYPE` FROM `INFORMATION_SCHEMA`.`USER_PRIVILEGES` WHERE GRANTEE='''root''@''localhost''' AND PRIVILEGE_TYPE='TRIGGER'
+		   57 Quit	
+		   56 Quit	
+		   58 Connect	pma@localhost on 
+		   59 Connect	root@localhost on 
+		   59 Query	SET CHARACTER SET 'utf8mb4'
+		   59 Query	SET collation_connection = 'utf8mb4_general_ci'
+		   59 Query	SELECT `SCHEMA_NAME` FROM `INFORMATION_SCHEMA`.`SCHEMATA` WHERE TRUE ORDER BY `SCHEMA_NAME` ASC LIMIT 0, 250
+		   59 Query	SELECT COUNT(*) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`='roomme' AND `TABLE_TYPE`='BASE TABLE'
+		   59 Query	SELECT COUNT(*) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`='roomme' AND `TABLE_TYPE`!='BASE TABLE'
+		   59 Query	SELECT COUNT(*) FROM `INFORMATION_SCHEMA`.`ROUTINES` WHERE `ROUTINE_SCHEMA`='roomme' AND `ROUTINE_TYPE`='FUNCTION'
+		   59 Query	SELECT COUNT(*) FROM `INFORMATION_SCHEMA`.`ROUTINES` WHERE `ROUTINE_SCHEMA`='roomme'AND `ROUTINE_TYPE`='PROCEDURE'
+		   59 Query	SELECT COUNT(*) FROM `INFORMATION_SCHEMA`.`EVENTS` WHERE `EVENT_SCHEMA`='roomme'
+		   59 Query	SELECT `TABLE_NAME` AS `name` FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`='roomme' AND `TABLE_TYPE`='BASE TABLE' ORDER BY `TABLE_NAME` ASC LIMIT 0, 250
+		   59 Query	SELECT COUNT(*) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`='roomme' AND `TABLE_TYPE`='BASE TABLE'
+		   59 Query	SELECT COUNT(*) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`='roomme' AND `TABLE_TYPE`='BASE TABLE'
+		   59 Quit	
+		   58 Quit	

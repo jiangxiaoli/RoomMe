@@ -1,0 +1,437 @@
+/* 	Filename: styles.css
+	For RoomMe pages
+*/
+html {
+	background-color: white;
+	width: 95%;
+	margin: auto;
+	margin-top: -10px;
+}
+
+body {
+	padding-top: 25px;
+	background: rgb(183, 218, 225);
+}
+
+body, header, form {
+	display: block;
+	margin: auto;
+	width: 100%;
+}
+
+header {
+	padding-top: 20px;
+	text-align: center;
+	width: 95%;
+}
+
+/* Set default styles */
+body * {
+	font-family: Verdana, Geneva, sans-serif;
+	margin: auto;
+	padding: 0px;
+}
+
+section {
+	border-radius: 15px;
+	margin: 10px auto;
+	padding: 5px 10px 20px;
+	background-color: white;
+	width: 80%;
+}
+
+p {
+	margin: 10px;
+	padding: 10px;
+}
+
+p#note {
+	background-color: rgba(178, 187, 189, 0.72);
+	font-size: 10px;
+	width: 85%;
+	margin: 2px auto 15px;
+}
+
+ul li {
+	margin-left: 40px;
+}
+
+h2#pagetype {
+	margin-top: -1%;
+	text-align: center;
+	color: black;
+}
+
+div#buttons {
+	text-align: center;
+}
+
+a {
+	text-decoration: none;
+	text-align: center;
+}
+
+a:hover {
+	background-color: #ff9900;
+	color: white;
+	font-style: bold;
+}
+
+/* Header styles */
+header {
+	margin: 10px 20px;
+}
+
+h2 {
+	text-align: center;
+	color: blue;
+	font-variant: uppercase;
+	margin: 20px;
+}
+
+#pagetype {
+	color: gray;
+	font-variant: small-caps;
+}
+
+#auserlist a {
+	text-decoration: none;
+}
+
+/* Navigation list styles */
+nav {
+	text-align: center;
+/*
+	background-color: rgb(75, 129, 160);
+	text-align: center;
+	padding: 15px auto;
+	margin: 30px auto;
+	width: 90%;*/
+}
+
+nav a {
+	display: inline-block;
+	text-align: center;
+	color: white;
+	padding: 12px 15px 5px;
+	height: 33px;
+	vertical-align: middle;
+}
+
+nav a:hover {
+	background-color: rgba(244,245,246,0.6);
+	color: black;
+	font-style: bold;
+}
+
+nav ul {
+	background-color: rgb(75, 129, 160);
+	height: 50px;
+	text-align: center;
+}
+
+nav li {
+	display: inline;
+	vertical-align: middle;
+	text-align: center;
+
+}
+
+
+/*
+nav li {
+	list-style: none;
+	padding: 0px 5px;
+	float: left;
+	text-align: center;
+}
+
+nav a {
+	padding: 5px;
+	color: black;
+}
+
+nav a:hover {
+	text-decoration: none;
+	color: white;
+	background-color: rgba(110, 126, 129, 0.74);
+	border-radius: 5px;
+}*/
+
+/* Section styles */
+
+#roomimg {
+	width: 30%;
+}
+
+#roomitems {
+	width: 15%;
+}
+/* Form Styles*/
+form {
+	width: 80%;
+	margin: auto;
+	background-color: rgba(244, 245, 246,0.7);
+	color: black;
+	border-radius: 10px;
+	border: 2px solid gray;
+	padding: 30px;
+}
+
+form#add_tenant, form#update_tenant {
+	background-color: white;
+	border: none;
+	padding: 0;
+	margin: 0;
+}
+
+form#signin {
+	width: 50%;
+	text-align: center;
+}
+
+form#signin span {
+	color: red;
+	font-weight: bold;
+}
+
+form#search {
+	text-align: center;
+	padding-top: 5px;
+	width: 50%;
+}
+
+form#signup {
+	width: 30%;
+	border: none;
+	border-radius: 0px;
+}
+
+form#signup input {
+	margin: -20px;
+}
+
+form input#phone_number {
+	width: 200px;
+}
+
+form div {
+	text-align: center;
+	padding: 5px;
+}
+
+form fieldset {
+	border: 0px solid black;
+}
+
+input, textarea {
+	border-radius: 5px;
+	border: 2px solid gray;
+}
+
+input:focus,textarea:focus {
+	background: gray;
+	color: white;
+}
+
+form h2 a {
+	font-variant: small-caps;
+	color: black;
+	margin-left: -20px;
+	padding: 5px;
+	border: 2px solid black;
+	border-radius: 8px;
+}
+
+form h2 a:hover {
+	color: white;
+	background-color: gray;
+	border: 1px solid gray;
+	border-radius: 8px;
+}
+
+form h3,h4 {
+	text-decoration: underline;
+}
+
+form h5 {
+	color: red;
+}
+
+input[type="text"], input[type='password'] {
+	height: 20px;
+	width: 300px;
+}
+
+#zipcode {
+	width: 90px;
+}
+
+textarea {
+	width: 400px;
+	height: 50px;
+	font-size: 14px;
+}
+
+input[type="number"] {
+	height: 20px;
+	width: 50px;
+}
+
+input[type="date"] {
+	height: 20px;
+}
+
+input[type="radio"] {
+	padding: 5px;
+	margin-left: 5px;
+}
+
+input[type='submit'] {
+	background: blue;
+	border: 2px solid blue;
+	height: 40px;
+	font-size: 20px;
+	margin-top: 5px;
+	padding: 5px;
+	color: white;
+	border-radius: 10px;
+}
+
+form#add_tenant input[type='submit'] {
+	display: inline;
+	background: green;
+	border: 2px solid green;
+	height: 30px;
+	font-size: 14px;
+	color: white;
+	border-radius: 5px;
+	margin-right: 10px;
+	margin-left: 5px;
+}
+
+form#update_tenant input[type='submit']:hover {
+	display: inline;
+	background: white;
+	color: blue;
+}
+
+form#update_tenant input[type='submit'] {
+	display: inline;
+	background: blue;
+	border: 2px solid blue;
+	height: 30px;
+	font-size: 14px;
+	color: white;
+	border-radius: 5px;
+	margin-right: 10px;
+	margin-left: 5px;
+}
+
+form#add_tenant input[type='submit']:hover {
+	display: inline;
+	background: white;
+	color: green;
+}
+
+form#add_tenant input[type='submit']#update {
+	display: inline;
+	background: green;
+	border: 2px solid green;
+	height: 30px;
+	font-size: 14px;
+	color: white;
+	border-radius: 5px;
+	margin-right: 10px;
+	vertical-align: middle;
+}
+
+form#add_tenant input[type='number'] {
+	height: 20px;
+}
+
+
+input[type='button']#update {
+	background: blue;
+	border: 2px solid blue;
+	height: 25px;
+	font-size: 14px;
+	color: white;
+	border-radius: 5px;
+	margin-right: 10px;
+}
+
+input[type='button']#delete {
+	background: red;
+	border: 2px solid red;
+	height: 25px;
+	font-size: 14px;
+	color: white;
+	border-radius: 5px;
+	margin-right: 10px;
+	margin-top: 2px;
+}
+
+input[type='button']#add {
+	background: green;
+	border: 2px solid green;
+	height: 25px;
+	font-size: 14px;
+	color: white;
+	border-radius: 5px;
+	margin-right: 10px;
+}
+
+input[type='button']#add:hover {
+	background-color: white;
+	color: green;
+}
+
+input[type='submit']:hover, input[type='button']#update:hover {
+	background-color: white;
+	color: blue;
+}
+
+input[type="reset"] {
+	background: red;
+	border: 2px solid red;
+	height: 40px;
+	font-size: 20px;
+	margin-top: 5px;
+	padding: 5px;
+	color: white;
+	border-radius: 10px;
+	margin-left: 10px;
+}
+
+input[type="reset"]:hover, input[type='button']#delete:hover {
+	background-color: white;
+	color: red;
+}
+
+
+
+/* Footer styles */
+footer {
+	color: white;
+	background-color: rgb(75, 129, 160);
+	padding: 15px;
+	margin-top: 40px;
+	text-align: center;
+	clear: both;
+}
+
+
+.resultlist {
+	margin: 10px;
+	color: blue; 
+	padding: 10px;
+	text-align: center;
+}
+.resultlist th {
+	padding: 0 10px 0 10px;
+}
+table.sortable th:not(.sorttable_sorted):not(.sorttable_sorted_reverse):after { 
+    content: " \25B4\25BE";
+    font-style: bold;
+}

@@ -1,0 +1,109 @@
+<html>
+
+<head>
+   <!-- 
+    Tenant Sign up Page
+   	Cmpe 180-38
+   	Team 6
+    -->
+
+	<meta charset="UTF-8" />
+	<title>RoomMe - Tenant Sign Up Page</title>
+	<link href="styles.css" rel="stylesheet" type="text/css" />
+   </head>
+
+
+   <body>
+	<header>
+	    <h1>RoomMe Application</h1>
+	</header>
+
+	<nav>
+		<ul>
+			<li><a href="homepage.html">RoomMe Home</a></li>
+			<li><a href="userhome.php">User Home</a></li>
+		</ul>
+	</nav>
+
+	</br>	
+	</br>
+
+	<h2 id="pagetype">Tenant Sign Up Page</h2>
+	
+	<!--<center>
+		<h2>TENANT Sign Up</h2>
+	</center>-->
+
+	<form action="tenantsignup.php" method="post">
+		<div align="center">
+		<fieldset id="TenantInfo">
+			<label for="username">Username</label>
+				<input name="username" type="text" requiredd="required" />
+			<br/></br/>
+
+			<label for="password">Password</label>
+				<input name="password" type="password" required="required" />
+			<br/></br/>
+
+			<label for="email">Email</label>
+				<input name="email" type="text" required="required" />
+			<br/></br/>
+
+			<label for="fname">First Name</label>
+				<input name="fname" type="text" required="required" />
+			<br/></br/>
+
+			<label for="lname">Last Name</label>
+				<input name="lname" type="text" required="required" />
+			<br/></br/>
+
+			<label for="phone_number">Phone Number</label>
+				<input name="phone_number" id='phone_number' type="number" placeholder="##########" min="1000000000" required="required" />
+			<br/></br/>
+
+			<label for="school">Located Near</label>
+				<input name="school" type="text" placeholder="School Name (ie. SJSU)" required="required" />
+			<br/><br/>
+
+			<label for="major">Major</label>
+				<input name="major" type="text" required="required" />
+			<br/><br/>
+
+			<label for="age">Age</label>
+				<input name="age" type="number" required="required" />
+			<br/><br/>
+
+			<label>Gender</label>
+				<input type="radio" name="gender" value="F">Female
+				<input type="radio" name="gender" value="M">Male<br/>
+			<br/>
+
+			<label>Smoking</label>
+				<input type="radio" name="smoking" value="y">Yes
+				<input type="radio" name="smoking" value="n" checked="checked">No<br/>
+			<br/>
+
+			<label>Pets</label>
+				<input type="radio" name="pets" value="y">Yes
+				<input type="radio" name="pets" value="n" checked="checked">No<br/>
+			<br/>
+
+			<label for="home_country">Home Country</label>
+				<input name="home_country" type="text"/>
+
+			<br/><br/>
+
+		</fieldset>
+
+
+		<input type="submit" value="Sign up">
+		</div>
+	</form>
+
+	</body>
+
+	<footer>
+		&copy; Team 6, Cmpe 180-38, SJSU, 2014
+	</footer>
+
+</html>
